@@ -1,0 +1,59 @@
+
+1) select * from customer
+   where address_id < 16;
+
+2) select * from customer
+   where address_id >6;
+
+3) select * from customer
+   where address_id <= 5; 
+
+4) select * from customer
+   where address_id >= 11;
+
+5) select * from customer
+   where address_id <> 12;
+
+6) select * from customer
+   where address_id = 9;
+
+7) select first_name ,length(first_name) as length
+   where length is not 8; //NOT IN
+
+8) select  first_name , length(first_name) as lengt from customer
+   where length(first_name)=8 or length(first_name)=10; //OR
+
+9) select * from customer
+   where first_name='Jared' and last_name='Ely';   //AND
+
+10) select first_name,last_name,address_id from customer
+    where address_id between 1 and 10;  //BETWEEN
+
+11) select first_name,last_name,address_id from customer
+    where address_id not between 1 and 15;   //NOT BETWEEN
+
+12) select first_name,last_name,address_id from customer
+    where address_id not between 1 and 15
+    limit 15; //LIMIT
+
+13) select * from customer
+    where not (customer_id=5);  //NOT
+
+14) select first_name,last_name,customer_id from customer
+    where first_name like 'B%';  //LIKE
+
+15) select first_name,last_name,customer_id from customer
+    where first_name not like 'B%';  //NOT LIKE
+
+16) select first_name,last_name from customer
+    where customer_id is null;  //IS NULL
+17) select first_name,last_name from customer
+    where customer_id is not null;  //IS NOT NULL
+
+18) select first_name,last_name,customer_id from customer
+    where first_name like 'B%'
+    offset 5;  //OFFSET
+
+19) select * from customer
+    where customer_id in (20,22,21);  //IN
+   
